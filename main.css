@@ -7,12 +7,17 @@
 }
 
 .timer {
-    position: absolute;.
+    position: absolute;
     top: 0;
     right: 0;
 }
 
-
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .start_btn {
     font-size: 25px;
@@ -30,4 +35,7 @@
     font-size: 25px;
     margin: auto;
     width: 100px;
+}
+.hide{
+    display: none;
 }
