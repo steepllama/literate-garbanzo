@@ -41,6 +41,20 @@
  */
 
 
+var timerEl = document.querySelector("#timer");
+var highScoresEl = document.querySelector("#scores");
+var gameRulesEl = document.querySelector("#rules");
+var startButtonEl = document.querySelector("#start-button");
+var questionEl = document.querySelector("#question");
+var answerEl = document.querySelector("#answers");
+
+document.addEventListener("click", function (event) {
+    if (event.target === start-button) {
+        setupTimer()
+        displayQuestions();
+    }
+})
+
 var timer = 60;
 var timeCount;
 function setupTimer() {
@@ -55,3 +69,5 @@ function setupTimer() {
         }
     }, 1000)
 }
+
+function onClickHandler(event)
