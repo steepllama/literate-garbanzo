@@ -41,13 +41,17 @@
  */
 
 
-function timer (){
-    var sec = 300;
-    var timer = setInterval(function() {
-        document.getElementById('timer').innerHTML='00:'+sec;
-        sec--;
-        if (sec < 0) {
-            clearInterval(timer);
+var timer = 60;
+var timeCount;
+function setupTimer() {
+    timeCount = setInterval(function () {
+        timer--;
+        var timeReset = timeElement.textContent = "Time" + " " + timer;
+        timer = timer;
+        if (timer <= 0) {
+            clearInterval(timeCount);
+
+            timeElement.textContent = timeReset;
         }
-    }, 1000);
+    }, 1000)
 }
