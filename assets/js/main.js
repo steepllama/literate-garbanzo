@@ -1,3 +1,17 @@
+let score = 0;
+let question = 0;
+let timeRemaining = 60;
+let start = document.getElementById('start');
+let beginQuiz = document.getElementById('beginQuiz');
+let questionsDiv = document.getElementById('questions');
+let quizDiv = document.getElementById('quiz');
+let feedbackEl = document.querySelector('#feedback');
+let timerEl = document.querySelector('#timeRemaining');
+let endQuizEl = document.getElementById('end');
+let time;
+let scoreArray = JSON.parse(localStorage.getItem('highScores')) || []
+
+
 function runTimer() {
     remainingTime--;
     if (remainingTime < 0) {
