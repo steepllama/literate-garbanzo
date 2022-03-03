@@ -2,7 +2,7 @@ let score = 0;
 let question = 0;
 let timeRemaining = 60;
 let start = document.getElementById('start');
-let beginQuiz = document.getElementById('beginQuiz');
+let bgn = document.getElementById('bgn');
 let questionsDiv = document.getElementById('questions');
 let quizDiv = document.getElementById('quiz');
 let feedbackEl = document.querySelector('#feedback');
@@ -75,7 +75,7 @@ function savePoints() {
 
 function endQuiz() {
     saveScore();
-    clearTime(interval);
+    clearInterval(time);
     questionsDiv.setAttribute('class', 'hidden')
 };
 
@@ -121,4 +121,4 @@ function checkAnswer() {
     }
 }
 
-beginQuiz.addEventListener('click', startGame)
+bgn.addEventListener('click', beginGame)
