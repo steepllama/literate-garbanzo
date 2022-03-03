@@ -4,236 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./main.css">
-    <script src="main.js"></script>
+    <title>Coding Quiz</title>
 </head>
 <body>
 
-<!-- Timer -->
-
-<div class="timer">
-    <h5 id="timer">Time: 0</h5>
+<!--high scores -->
+<div class="high-score">
+    <button class="submit-btn" id="scorebtn">View High Scores</button>
 </div>
 
-<div class="high-scores">
-    <div id="scores">
-        <a href="">View high scores</a>
-    </div>
+<!-- Time -->
+<div class="time">
+    <p>Time Remaining:<span class="time-left">0:00</span></p>
 </div>
 
-<!-- Rules -->
-<div class="info">
-    <div>
-        <span>
-            <p>Game Rules</p>
-        </span>
-    </div>
-</div>
-<div>
-    <div class="rules-main">
-        <span class="rules">
-            <p> You will have 5 minutes to complete this quiz. You get 2 points per question. Once you click the begin button you can not go back. Your score will be given at the end of the quiz. Good luck! </p>
-        </span>
-    </div>
-</div>
-<br>
-<!-- Start button -->
-<section id="start-page">
-    <div class="start_btn">
-        <button id="start-button" type="submit">Start</button>
-    </div>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What does HTML stand for?</h2>
-    <ul id="answers">
-        <li>
-            Hypertext Markup Language.
-        </li>
-        <li>
-            Hypertest Makeup Love.
-        </li>
-        <li>
-            Hypertext Makeup Language.
-        </li>
-        <li>
-            High Text Markup Language.
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What does CSS stand for?</h2>
-    <ul id="answers">
-        <li>
-            Cascade Super Styles.
-        </li>
-        <li>
-            Cookie Styling stylesheet.
-        </li>
-        <li>
-            Cascading Style Sheets.
-        </li>
-        <li>
-            Cascades Styling Super.
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What is JavaScript used for?</h2>
-    <ul id="answers">
-        <li>
-            Styles the webpage to look pretty. 
-        </li>
-        <li>
-            Gives web pages interactive elements that engage the user.
-        </li>
-        <li>
-            Gives webpages numbers.
-        </li>
-        <li>
-            Makes the webpages load faster.
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">Whats the biggest heading in HTML?</h2>
-    <ul id="answers">
-        <li>
-            h4 
-        </li>
-        <li>
-            h6
-        </li>
-        <li>
-            h1
-        </li>
-        <li>
-            h3
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What does the '.' in CSS represent?</h2>
-    <ul id="answers">
-        <li>
-            class
-        </li>
-        <li>
-            id
-        </li>
-        <li>
-            container
-        </li>
-        <li>
-            heading
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What does '#' represent in CSS?</h2>
-    <ul id="answers">
-        <li>
-            class
-        </li>
-        <li>
-            id
-        </li>
-        <li>
-            universal
-        </li>
-        <li>
-            body
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">Which software company discovered JavaScript?</h2>
-    <ul id="answers">
-        <li>
-            Facebook
-        </li>
-        <li>
-            MySpace
-        </li>
-        <li>
-            Whatsapp
-        </li>
-        <li>
-            Netscape
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">What software do developers all over the globe use?</h2>
-    <ul id="answers">
-        <li>
-            iCloud
-        </li>
-        <li>
-            Google Drive
-        </li>
-        <li>
-            Dropbox
-        </li>
-        <li>
-            Github
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">How do you add all files that you modified on git?</h2>
-    <ul id="answers">
-        <li>
-            terminal
-        </li>
-        <li>
-            git status
-        </li>
-        <li>
-            git branch
-        </li>
-        <li>
-            git add .
-        </li>
-    </ul>
-</section>
-
-<section id="question-page" class="hide">
-    <h2 id="question">How do you create a new branch in terminal?</h2>
-    <ul id="answers">
-        <li>
-            git add -A
-        </li>
-        <li>
-            git checkout
-        </li>
-        <li>
-            git init
-        </li>
-        <li>
-            git checkout -b 'new-branch'
-        </li>
-    </ul>
-</section>
-
-
-    <!-- <div>
-        <div class="exit_btn" >
-            <button type="button">Exit Quiz</button>
-        </div>
+<main>
+    <div class="inst">
+        <h1>Welcome to Coding Quiz</h1>
+        <p>This quiz is designed to challenge your knowledge of HTML, CSS, and Javascript. There is a total of 10 multiple choice questions, take your time but not to much time since this is a timed quiz. You have 1 minute to complete, Good Luck!!</p>
         <br>
-        <div class="continue_btn" >
-            <button type="button">Continue</button>
-        </div>
-    </div> -->
+    <button class="submit-btn" id="bgn">Start</button>
+    </div>
+
+    <div class="hidden" id="questions">
+        <h2 class="main-question"></h2>
+        <div class="answers"></div>
+    </div>
+
+    <div class="hidden" id="over">
+        <h1>Game Over!!</h1>
+    </div>
+</main>
+
+<section class="hidden" id="high-score">
+    <div class="high-score">
+        <h2>All Done!!</h2>
+        <h3>Your final score is <span class="final">0</span></h3>
+        <label for="initials">Enter your initials:</label>
+        <input type="text" name="initials" maxlength="2" class="name">
+        <button class="submit-btn" type="submit">Submit</button>
+    </div>
+</section>
 </body>
 </html>
