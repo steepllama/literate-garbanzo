@@ -17,23 +17,23 @@
 
 <!-- Time -->
 <div class="time">
-    <p>Time:<span class="time-left">0:00</span></p>
+    <p>Time:<span id="spareTime">0:00</span></p>
 </div>
 
 <!-- Main -->
 <main>
-    <section class="inst">
+    <section class="intro" id="intro">
         <h1>Welcome to Coding Quiz</h1>
         <p>This quiz is designed to challenge your knowledge of HTML, CSS, and Javascript. There is a total of 10 multiple choice questions, this is a timed quiz. You have 1 minute to complete, Good Luck!!</p>
         <br>
         <div>
-            <button class="submit-btn" id="begin">Begin</button>
+            <button class="submit-btn" id="begin-btn">Begin</button>
         </div>
     </section>
 
     <!-- Questions -->
-    <section>
-        <div>
+    <section id="questions">
+        <div class="hidden" id="q1">
             <p>Question 1:
                 <br>
                 What does HTML stand for?
@@ -46,7 +46,7 @@
                 </ul>
             </p>
         </div>
-        <div>
+        <div class="hidden" id="q2">
             <p>Question 2:
             <br>
             What is the smallest heading in HTML?
@@ -59,7 +59,7 @@
             </ul>
             </p>
         </div>
-        <div>
+        <div class="hidden" id="q3">
             <p>Question 3:
             <br>
             When was Javascript invented?
@@ -72,7 +72,7 @@
             </ul>
             </p>
         </div>
-        <div>
+        <div class="hidden" id="q4">
             <p>Question 4:
             <br>
             What can you store in a array?
@@ -84,7 +84,7 @@
             </ul>
             </p>
         </div>
-        <div>
+        <div class="hidden" id="q5">
             <p>Question 5:
             <br>
             What company developed Javascript?
@@ -97,20 +97,19 @@
             </ul>
             </p>
         </div>
-        <div>
+        <div class="hidden" id="q6">
             <p>Question 6:
             <br>
             What is CSS short for?
             <br>
-            <button onClick="checkAnswer()">Cascading Style Sheets</button>
-            <button onClick="checkAnswer()">Cascade Short Sheets</button>
-            <button onClick="checkAnswer()">Cascade Styling Sheets</button>
-            <button onClick="checkAnswer()">Cascading Super Sheets</button>
+            <button onClick="checkAnswer(true)">Cascading Style Sheets</button>
+            <button onClick="checkAnswer(false)">Cascade Short Sheets</button>
+            <button onClick="checkAnswer(false)">Cascade Styling Sheets</button>
+            <button onClick="checkAnswer(false)">Cascading Super Sheets</button>
             </p>
         </div>
     </section>
 
 <script src="./assets/js/main.js"></script>
-
 </body>
 </html>
